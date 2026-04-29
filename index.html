@@ -176,20 +176,37 @@
           </div>
           <div class="listing-meta">
             <strong>Apple Watch Ultra</strong>
-            <span>Комплект · идеальный корпус</span>
+            <span>Комплект · мощные характеристики</span>
           </div>
         </article>
         <article class="listing-card">
           <div class="listing-photo mac-preview">
-            <img src="phone_12.png" alt="iPhone 12" class="listing-image" loading="lazy" decoding="async" />
+            <img src="phone_11.png" alt="iPhone 11" class="listing-image" loading="lazy" decoding="async" />
           </div>
           <div class="listing-meta">
-            <strong>iPhone 12</strong>
+            <strong>iPhone 11</strong>
             <span>64 ГБ · проверка перед сделкой</span>
           </div>
         </article>
       </div>
     </section>
   </main>
+  <script>
+    const mobileDetailsQuery = window.matchMedia("(max-width: 760px)");
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    document.querySelectorAll(".info-block").forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (!details.open || !mobileDetailsQuery.matches) return;
+
+        requestAnimationFrame(() => {
+          details.scrollIntoView({
+            block: "start",
+            behavior: reducedMotionQuery.matches ? "auto" : "smooth",
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
