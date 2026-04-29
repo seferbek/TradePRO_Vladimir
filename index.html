@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#f3f0e8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111111" media="(prefers-color-scheme: dark)" />
+  <meta name="msapplication-navbutton-color" content="#f3f0e8" />
+  <title>Владимир — скупка техники Apple</title>
+  <link rel="stylesheet" href="styles.css?v=terraria-editorial-2" />
+  <script>
+    const updateThemeColor = () => {
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const color = dark ? "#111111" : "#f3f0e8";
+      document.querySelectorAll('meta[name="theme-color"]').forEach((meta) => {
+        meta.setAttribute("content", color);
+      });
+      document.querySelector('meta[name="msapplication-navbutton-color"]')?.setAttribute("content", color);
+    };
+
+    updateThemeColor();
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateThemeColor);
+  </script>
+</head>
+<body>
+  <header class="site-header" aria-label="Навигация">
+    <a class="brand" href="#top" aria-label="В начало">
+      <span aria-hidden="true">В</span>
+      <strong>Владимир</strong>
+    </a>
+    <p class="brand-meta">Саратов - Энгельс · онлайн оценка · скупка и продажа Apple</p>
+    <nav class="header-links" aria-label="Основные ссылки">
+      <a href="#terms">Условия</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#listings">Объявления</a>
+    </nav>
+  </header>
+
+  <main class="page-shell" id="top">
+    <section class="card" id="terms">
+      <div class="card-header">
+        <div class="avatar">
+          <img src="ava.png" alt="Владимир" loading="lazy" decoding="async" width="120" height="120" />
+        </div>
+      </div>
+      <h1>Владимир</h1>
+      <p class="description">
+        Занимаюсь скупкой и продажей iPhone и техники Apple. Вся информация по сотрудничеству и условия продажи ниже.
+      </p>
+      <div class="info-grid">
+        <details class="info-block">
+          <summary>Условия доставки</summary>
+          <div class="info-content">
+            <p>Доставка доступна несколькими способами, чтобы вы могли выбрать удобный вариант.</p>
+            <p><strong>1. По городу Саратову и Энгельсу</strong> — Яндекс.Доставка или личная передача по договорённости.</p>
+            <p><strong>2. Авито доставка</strong> — отправка в день заказа и отслеживание через платформу.</p>
+            <p><strong>3. СДЭК, Боксберри и другие службы</strong> — по полной предоплате, отправка в день заказа.</p>
+            <p>Перед отправкой согласуем удобное время и адрес, чтобы вы получили товар быстро и без задержек.</p>
+          </div>
+        </details>
+        <details class="info-block">
+          <summary>Условия скупки</summary>
+          <div class="info-content">
+            <p>Срочно выкупаем Apple Watch и iPhone — быстро, честно и с удобной оплатой.</p>
+            <p><strong>Почему выбирают нас:</strong></p>
+            <p>• Честная цена — бесплатная онлайн-оценка по фото.</p>
+            <p>• Мгновенный расчёт — наличные или перевод на карту сразу при встрече.</p>
+            <p>• Удобно и безопасно — встречаемся в удобном месте, обсуждаем условия заранее.</p>
+            <p><strong>Как это работает:</strong></p>
+            <p>1. Вы отправляете модель, состояние и фото.</p>
+            <p>2. Я называю точную сумму сразу после оценки.</p>
+            <p>3. Договариваемся о встрече.</p>
+            <p>4. Проверяем устройство и оплачиваем.</p>
+            <p><strong>Требования к устройствам:</strong></p>
+            <p>1. Айфон не восстановлен.</p>
+            <p>2. Айфон полностью рабочий: True Tone, Face ID и другие функции работают.</p>
+            <p>3. Используются только оригинальные запчасти (исключение — заменённый аккумулятор или крышка).</p>
+            <p>4. Телефон в хорошем состоянии — хлам не интересует.</p>
+          </div>
+        </details>
+      </div>
+      <div class="contacts">
+        <a class="contact-link" href="https://www.avito.ru/brands/i130240223?src=fs&amp;page_from=from_favorite_sellers" target="_blank" rel="noreferrer">
+          <span class="contact-icon avito-icon" aria-hidden="true">
+            <img src="avito.png" alt="" loading="lazy" decoding="async" width="46" height="46" />
+          </span>
+          <div>
+            <span class="contact-title">
+              Мой Авито
+              <small class="review-badge">160+ отзывов</small>
+            </span>
+            <small>Открыть профиль</small>
+          </div>
+        </a>
+        <a class="contact-link" href="tel:+79878090733">
+          <span class="contact-icon" aria-hidden="true">
+            <img src="phone.png" alt="" loading="lazy" decoding="async" width="46" height="46" />
+          </span>
+          <div>
+            <span class="contact-title">Номер для связи</span>
+            <small>Позвонить одним кликом</small>
+          </div>
+        </a>
+        <a class="contact-link" href="https://t.me/vldmrzz" target="_blank" rel="noreferrer">
+          <span class="contact-icon" aria-hidden="true">
+            <img src="telegram.png" alt="" loading="lazy" decoding="async" width="46" height="46" />
+          </span>
+          <div>
+            <span class="contact-title">Мой Telegram</span>
+            <small>Написать прямо в мессенджер</small>
+          </div>
+        </a>
+        <a class="contact-link" href="https://t.me/TRADEPRO64" target="_blank" rel="noreferrer">
+          <span class="contact-icon" aria-hidden="true">
+            <img src="channel.jpg" alt="" loading="lazy" decoding="async" width="46" height="46" />
+          </span>
+          <div>
+            <span class="contact-title">Канал в Telegram</span>
+            <small>Изучить свежие объявления</small>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="reviews-section section-panel" id="reviews">
+      <div class="section-heading">
+        <span>Мои отзывы</span>
+        <h2>Что говорят после сделки</h2>
+      </div>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div class="review-topline">
+            <strong>Мария</strong>
+            <span>5.0</span>
+          </div>
+          <p>Все отлично. Продавца рекомендую. Часы как и было написано в описании. Быстрая отправка.</p>
+        </article>
+        <article class="review-card">
+          <div class="review-topline">
+            <strong>Наталья Орлова</strong>
+            <span>5.0</span>
+          </div>
+          <p>Продавец очень вежлив , с ним приятно было общаться , дал ответы на все вопросы  Отправил посылку не отказал  Все доходчиво объяснил  Супер человек  Таких как он нужно больше  Прям получила массу удовольствия от приобретения товара  Спасибо большое ему !!!!!</p>
+        </article>
+        <article class="review-card">
+          <div class="review-topline">
+            <strong>Олег</strong>
+            <span>5.0</span>
+          </div>
+          <p>Продавец хороший, отвечает быстро, находится не на краю города, что тоже удобно. Товар соответствует описанию. Все показал, рассказал, помог подключить. Дефектов пока не видно скрытых, надеюсь, их и нет.  Рекомендую.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="listings-section section-panel" id="listings">
+      <div class="section-heading">
+        <span>Примеры объявлений</span>
+        <h2>Техника, которая бывает в продаже</h2>
+      </div>
+      <div class="listing-grid">
+        <article class="listing-card">
+          <div class="listing-photo phone-preview">
+            <img src="phone_16pro.png" alt="iPhone 16 Pro" class="listing-image" loading="lazy" decoding="async" />
+          </div>
+          <div class="listing-meta">
+            <strong>iPhone 16 Pro</strong>
+            <span>256 ГБ · отличное состояние</span>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="listing-photo watch-preview">
+            <img src="watch.png" alt="Apple Watch" class="listing-image" loading="lazy" decoding="async" />
+          </div>
+          <div class="listing-meta">
+            <strong>Apple Watch Ultra</strong>
+            <span>Комплект · идеальный корпус</span>
+          </div>
+        </article>
+        <article class="listing-card">
+          <div class="listing-photo mac-preview">
+            <img src="phone_12.png" alt="iPhone 12" class="listing-image" loading="lazy" decoding="async" />
+          </div>
+          <div class="listing-meta">
+            <strong>iPhone 12</strong>
+            <span>64 ГБ · проверка перед сделкой</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
