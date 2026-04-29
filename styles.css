@@ -175,7 +175,7 @@ a {
 }
 
 .page-shell {
-  padding-bottom: 0;
+  padding-bottom: 16px;
 }
 
 .card,
@@ -735,8 +735,13 @@ h1 {
   }
 
   .site-header {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     grid-template-columns: auto 1fr;
     gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .header-contact-link {
