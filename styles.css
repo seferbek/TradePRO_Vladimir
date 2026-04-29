@@ -253,14 +253,6 @@ h1 {
   align-self: end;
 }
 
-.hero-title p {
-  color: var(--muted);
-  font-size: clamp(1.05rem, 1.4vw, 1.22rem);
-  font-weight: 850;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .description {
   max-width: 720px;
   color: var(--muted);
