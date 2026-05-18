@@ -186,11 +186,11 @@ a {
 .card {
   min-height: calc(100svh - 76px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.46fr);
-  align-content: end;
+  grid-template-columns: minmax(0, 1fr) minmax(500px, 0.68fr);
+  align-content: center;
   column-gap: 48px;
   row-gap: 30px;
-  padding: 56px 0 76px;
+  padding: 56px 0;
 }
 
 .card > * {
@@ -221,6 +221,19 @@ a {
   filter: saturate(0.92) contrast(1.03);
 }
 
+@media (min-width: 1121px) {
+  .card-header {
+    align-self: start;
+  }
+
+  .avatar {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+}
+
 h1,
 h2,
 p {
@@ -235,12 +248,17 @@ h1,
 }
 
 h1 {
+  display: grid;
+  row-gap: clamp(10px, 0.9vw, 18px);
   max-width: 100%;
   color: var(--ink);
-  font-size: clamp(7.4rem, 8.7vw, 10rem);
-  line-height: 0.78;
+  font-size: clamp(8.2rem, 9.6vw, 11.5rem);
+  line-height: 0.82;
   text-transform: uppercase;
-  white-space: nowrap;
+}
+
+h1 span {
+  display: block;
 }
 
 .hero-title {
@@ -669,12 +687,12 @@ h1 {
 
 @media (max-width: 1280px) and (min-width: 1121px) {
   .card {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.4fr);
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 0.56fr);
     column-gap: 34px;
   }
 
   h1 {
-    font-size: 7.2rem;
+    font-size: 8rem;
   }
 
   .description {
@@ -803,9 +821,18 @@ h1 {
   }
 
   h1 {
+    display: block;
     font-size: 4.2rem;
     line-height: 0.86;
     white-space: nowrap;
+  }
+
+  h1 span {
+    display: inline;
+  }
+
+  h1 span + span::before {
+    content: " ";
   }
 
   .avatar {
