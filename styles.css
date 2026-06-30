@@ -412,7 +412,7 @@ h1 span {
   place-items: center;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius-soft);
+  border-radius: 50px;
 }
 
 .contact-icon img {
